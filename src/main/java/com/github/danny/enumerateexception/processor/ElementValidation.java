@@ -1,4 +1,4 @@
-package com.kakao.harmony.enumerateexception.processor;
+package com.github.danny.enumerateexception.processor;
 
 import org.springframework.http.HttpStatus;
 

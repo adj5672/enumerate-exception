@@ -1,6 +1,6 @@
-package com.kakao.harmony.enumerateexception.processor;
+package com.github.danny.enumerateexception.processor;
 
-import com.kakao.harmony.enumerateexception.exception.CustomRuntimeException;
+import com.github.danny.enumerateexception.exception.CustomRuntimeException;
 import com.squareup.javapoet.TypeSpec;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.RestControllerAdvice;

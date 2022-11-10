@@ -1,4 +1,4 @@
-package com.kakao.harmony.enumerateexception.annotation;
+package com.github.danny.enumerateexception.annotation;
 
 import java.lang.annotation.*;
 

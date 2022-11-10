@@ -1,7 +1,7 @@
-package com.kakao.harmony.enumerateexception.processor;
+package com.github.danny.enumerateexception.processor;
 
-import com.kakao.harmony.enumerateexception.exception.CustomRuntimeException;
-import com.kakao.harmony.enumerateexception.response.BaseErrorResponse;
+import com.github.danny.enumerateexception.exception.CustomRuntimeException;
+import com.github.danny.enumerateexception.response.BaseErrorResponse;
 import com.squareup.javapoet.MethodSpec;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +10,7 @@ import javax.lang.model.element.Modifier;
 import javax.lang.model.element.VariableElement;
 import java.util.List;
 
-import static com.kakao.harmony.enumerateexception.processor.AnnotationSpecFactory.createExceptionHandler;
+import static com.github.danny.enumerateexception.processor.AnnotationSpecFactory.createExceptionHandler;
 
 class MethodSpecFactory {
 

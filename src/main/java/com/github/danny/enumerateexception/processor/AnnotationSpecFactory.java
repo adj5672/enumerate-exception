@@ -1,4 +1,4 @@
-package com.kakao.harmony.enumerateexception.processor;
+package com.github.danny.enumerateexception.processor;
 
 import com.squareup.javapoet.AnnotationSpec;
 import org.springframework.web.bind.annotation.ExceptionHandler;

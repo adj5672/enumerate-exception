@@ -1,7 +1,7 @@
-package com.kakao.harmony.enumerateexception.processor;
+package com.github.danny.enumerateexception.processor;
 
+import com.github.danny.enumerateexception.annotation.EnumeratedException;
 import com.google.auto.service.AutoService;
-import com.kakao.harmony.enumerateexception.annotation.EnumeratedException;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;

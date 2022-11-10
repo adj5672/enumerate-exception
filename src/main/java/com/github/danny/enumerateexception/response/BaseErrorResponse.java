@@ -1,4 +1,4 @@
-package com.kakao.harmony.enumerateexception.response;
+package com.github.danny.enumerateexception.response;
 
 public class BaseErrorResponse {
 
