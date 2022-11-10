@@ -1,4 +1,4 @@
-package com.github.danny.enumerateexception.processor;
+package io.github.adj5672.enumerateexception.processor;
 
 import org.springframework.http.HttpStatus;
 

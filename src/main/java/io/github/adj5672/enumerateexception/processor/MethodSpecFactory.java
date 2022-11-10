@@ -1,8 +1,8 @@
-package com.github.danny.enumerateexception.processor;
+package io.github.adj5672.enumerateexception.processor;
 
-import com.github.danny.enumerateexception.exception.CustomRuntimeException;
-import com.github.danny.enumerateexception.response.BaseErrorResponse;
 import com.squareup.javapoet.MethodSpec;
+import io.github.adj5672.enumerateexception.exception.CustomRuntimeException;
+import io.github.adj5672.enumerateexception.response.BaseErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -10,7 +10,7 @@ import javax.lang.model.element.Modifier;
 import javax.lang.model.element.VariableElement;
 import java.util.List;
 
-import static com.github.danny.enumerateexception.processor.AnnotationSpecFactory.createExceptionHandler;
+import static io.github.adj5672.enumerateexception.processor.AnnotationSpecFactory.createExceptionHandler;
 
 class MethodSpecFactory {
 

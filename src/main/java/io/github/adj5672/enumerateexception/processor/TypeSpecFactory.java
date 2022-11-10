@@ -1,7 +1,7 @@
-package com.github.danny.enumerateexception.processor;
+package io.github.adj5672.enumerateexception.processor;
 
-import com.github.danny.enumerateexception.exception.CustomRuntimeException;
 import com.squareup.javapoet.TypeSpec;
+import io.github.adj5672.enumerateexception.exception.CustomRuntimeException;
 import org.springframework.core.annotation.Order;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 

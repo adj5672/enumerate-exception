@@ -1,4 +1,4 @@
-package com.github.danny.enumerateexception.annotation;
+package io.github.adj5672.enumerateexception.annotation;
 
 import java.lang.annotation.*;
 

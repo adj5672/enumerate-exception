@@ -1,10 +1,10 @@
-package com.github.danny.enumerateexception.processor;
+package io.github.adj5672.enumerateexception.processor;
 
-import com.github.danny.enumerateexception.annotation.EnumeratedException;
 import com.google.auto.service.AutoService;
 import com.squareup.javapoet.ClassName;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
+import io.github.adj5672.enumerateexception.annotation.EnumeratedException;
 
 import javax.annotation.processing.*;
 import javax.lang.model.SourceVersion;

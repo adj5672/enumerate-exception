@@ -1,4 +1,4 @@
-package com.github.danny.enumerateexception.response;
+package io.github.adj5672.enumerateexception.response;
 
 public class BaseErrorResponse {
 
