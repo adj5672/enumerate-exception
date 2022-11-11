@@ -6,7 +6,7 @@
 
     <groupId>io.github.adj5672</groupId>
     <artifactId>enumerate-exception</artifactId>
-    <version>0.0.2-SNAPSHOT</version>
+    <version>0.0.4-SNAPSHOT</version>
 
     <name>Enumerate Exception</name>
     <description>Automatically generate exception classes with annotation processor.</description>
