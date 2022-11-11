@@ -66,7 +66,8 @@ class MethodSpecFactory {
         MethodSpec getMessage = MethodSpec.methodBuilder("getMessage")
             .addModifiers(Modifier.PUBLIC)
             .addAnnotation(Override.class)
-            .addStatement("return super.getMessage() == null ? $1L.$2L.getMessage() : super.getMessage()", type, enumConstant)
+            .addStatement("String message = super.getMessage() == null ? $1L.$2L.getMessage() : super.getMessage()", type, enumConstant)
+            .addStatement("return message + \" \" + stringifyParameters()")
             .returns(String.class)
             .build();
 
