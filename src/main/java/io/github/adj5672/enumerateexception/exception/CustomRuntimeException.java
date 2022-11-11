@@ -2,6 +2,8 @@ package io.github.adj5672.enumerateexception.exception;
 
 import org.springframework.http.HttpStatus;
 
+import java.util.function.Supplier;
+
 public class CustomRuntimeException extends RuntimeException {
 
     public CustomRuntimeException() {
@@ -25,5 +27,11 @@ public class CustomRuntimeException extends RuntimeException {
 
     public HttpStatus getHttpStatus() {
         return HttpStatus.INTERNAL_SERVER_ERROR;
+    }
+
+    public Supplier<CustomRuntimeException> toSupplier() {
+        return () -> {
+            throw this;
+        };
     }
 }
