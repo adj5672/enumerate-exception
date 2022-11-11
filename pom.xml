@@ -6,7 +6,7 @@
 
     <groupId>io.github.adj5672</groupId>
     <artifactId>enumerate-exception</artifactId>
-    <version>0.0.1</version>
+    <version>0.0.2-SNAPSHOT</version>
 
     <name>Enumerate Exception</name>
     <description>Automatically generate exception classes with annotation processor.</description>
@@ -28,7 +28,6 @@
             <groupId>com.google.auto.service</groupId>
             <artifactId>auto-service</artifactId>
             <version>1.0.1</version>
-            <optional>true</optional>
         </dependency>
         <dependency>
             <groupId>com.github.olivergondza</groupId>
