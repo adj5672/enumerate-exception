@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-@SupportedAnnotationTypes("com.kakao.harmony.controlleradvice.annotation.EnumeratedException")
+@SupportedAnnotationTypes("io.github.adj5672.enumerateexception.annotation.EnumeratedException")
 @SupportedSourceVersion(SourceVersion.RELEASE_11)
 @AutoService(Processor.class)
 public class EnumeratedExceptionProcessor extends AbstractProcessor {
