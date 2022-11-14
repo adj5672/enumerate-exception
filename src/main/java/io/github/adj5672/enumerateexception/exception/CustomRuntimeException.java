@@ -3,6 +3,7 @@ package io.github.adj5672.enumerateexception.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.util.StringUtils;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
@@ -11,6 +12,7 @@ import java.util.stream.Collectors;
 public class CustomRuntimeException extends RuntimeException {
 
     private final Map<String, Object> parameters = new HashMap<>();
+    private Object body;
 
     public CustomRuntimeException() {
     }
@@ -43,6 +45,21 @@ public class CustomRuntimeException extends RuntimeException {
 
     public CustomRuntimeException addParameter(String key, Object value) {
         parameters.put(key, value);
+        return this;
+    }
+
+    @Nullable
+    public Object getParameter(String key) {
+        return parameters.get(key);
+    }
+
+    @Nullable
+    public Object getBody() {
+        return this.body;
+    }
+
+    public CustomRuntimeException setBody(Object body) {
+        this.body = body;
         return this;
     }
 
