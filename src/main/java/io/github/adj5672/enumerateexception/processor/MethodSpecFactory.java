@@ -3,6 +3,7 @@ package io.github.adj5672.enumerateexception.processor;
 import com.squareup.javapoet.MethodSpec;
 import io.github.adj5672.enumerateexception.exception.CustomRuntimeException;
 import io.github.adj5672.enumerateexception.response.BaseErrorResponse;
+import io.github.adj5672.enumerateexception.response.DataErrorResponse;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -79,7 +80,8 @@ class MethodSpecFactory {
             .addModifiers(Modifier.PUBLIC)
             .addAnnotation(createExceptionHandler())
             .addParameter(CustomRuntimeException.class, "e")
-            .addStatement("$1L response = new $1L(e.getCode(), e.getMessage())", BaseErrorResponse.class.getName())
+            .addCode("$1L response = e.getBody() == null ? new $1L(e.getCode(), e.getMessage())", BaseErrorResponse.class.getName())
+            .addCode(": new $1L(e.getCode(), e.getMessage(), e.getBody());", DataErrorResponse.class.getName())
             .addStatement("return ResponseEntity.status(e.getHttpStatus()).body(response)")
             .returns(ResponseEntity.class)
             .build();
