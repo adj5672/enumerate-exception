@@ -53,8 +53,8 @@ class MethodSpecFactory {
         MethodSpec getCode = MethodSpec.methodBuilder("getCode")
             .addModifiers(Modifier.PUBLIC)
             .addAnnotation(Override.class)
-            .addStatement("return $1L.$2L.getCode()", type, enumConstant)
-            .returns(int.class)
+            .addStatement("return $1L.$2L.name().toString()", type, enumConstant)
+            .returns(String.class)
             .build();
 
         MethodSpec getHttpStatus = MethodSpec.methodBuilder("getHttpStatus")

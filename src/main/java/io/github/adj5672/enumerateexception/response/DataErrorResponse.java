@@ -7,7 +7,7 @@ public class DataErrorResponse extends BaseErrorResponse {
     public DataErrorResponse() {
     }
 
-    public DataErrorResponse(int code, String message, Object data) {
+    public DataErrorResponse(String code, String message, Object data) {
         super(code, message);
         this.data = data;
     }

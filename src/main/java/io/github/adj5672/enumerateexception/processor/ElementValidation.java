@@ -12,14 +12,6 @@ class ElementValidation {
     private ElementValidation() {
     }
 
-    public static boolean hasGetCode(List<? extends Element> elements) {
-        return elements.stream()
-            .filter(element -> element.getKind() == ElementKind.METHOD)
-            .map(ExecutableElement.class::cast)
-            .anyMatch(element -> element.getSimpleName().contentEquals("getCode")
-                && element.getReturnType().toString().equals(int.class.getName()));
-    }
-
     public static boolean hasGetHttpStatus(List<? extends Element> elements) {
         return elements.stream()
             .filter(element -> element.getKind() == ElementKind.METHOD)

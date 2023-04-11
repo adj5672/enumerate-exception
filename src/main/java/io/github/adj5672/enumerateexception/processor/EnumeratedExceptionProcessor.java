@@ -6,7 +6,11 @@ import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.TypeSpec;
 import io.github.adj5672.enumerateexception.annotation.EnumeratedException;
 
-import javax.annotation.processing.*;
+import javax.annotation.processing.AbstractProcessor;
+import javax.annotation.processing.Processor;
+import javax.annotation.processing.RoundEnvironment;
+import javax.annotation.processing.SupportedAnnotationTypes;
+import javax.annotation.processing.SupportedSourceVersion;
 import javax.lang.model.SourceVersion;
 import javax.lang.model.element.Element;
 import javax.lang.model.element.ElementKind;
@@ -77,9 +81,6 @@ public class EnumeratedExceptionProcessor extends AbstractProcessor {
     }
 
     private void checkEssentialMethodsExist(List<? extends Element> elements) {
-        if (!ElementValidation.hasGetCode(elements)) {
-            printError("Enum class with @EnumeratedException must have getCode() method that returns int");
-        }
         if (!ElementValidation.hasGetHttpStatus(elements)) {
             printError("Enum class with @EnumeratedException must have getHttpStatus() method that returns HttpStatus");
         }

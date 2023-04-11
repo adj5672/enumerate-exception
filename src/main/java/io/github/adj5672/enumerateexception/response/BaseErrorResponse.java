@@ -2,18 +2,18 @@ package io.github.adj5672.enumerateexception.response;
 
 public class BaseErrorResponse {
 
-    private int code = 0;
+    private String code = "";
     private String message = "";
 
     public BaseErrorResponse() {
     }
 
-    public BaseErrorResponse(int code, String message) {
+    public BaseErrorResponse(String code, String message) {
         this.code = code;
         this.message = message;
     }
 
-    public int getCode() {
+    public String getCode() {
         return code;
     }
 

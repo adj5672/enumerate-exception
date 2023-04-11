@@ -9,7 +9,7 @@ import java.util.Map;
 import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
-public class CustomRuntimeException extends RuntimeException {
+public abstract class CustomRuntimeException extends RuntimeException {
 
     private final Map<String, Object> parameters = new HashMap<>();
     private Object body;
@@ -29,13 +29,9 @@ public class CustomRuntimeException extends RuntimeException {
         super(cause);
     }
 
-    public int getCode() {
-        return 0;
-    }
+    public abstract String getCode();
 
-    public HttpStatus getHttpStatus() {
-        return HttpStatus.INTERNAL_SERVER_ERROR;
-    }
+    public abstract HttpStatus getHttpStatus();
 
     public Supplier<CustomRuntimeException> toSupplier() {
         return () -> {
